@@ -1,0 +1,108 @@
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+
+<GridPane fx:controller="controllers.BoggleController" fx:id="playGridPaneRoot"
+          xmlns:fx="http://javafx.com/fxml" alignment="center">
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2" alignment="CENTER" spacing="2">
+
+        <HBox >
+            <Button fx:id="playStartButton" text="Start" />
+            <Label text="Time Remaining: "/>
+            <Label fx:id="playTimeRemaining" />
+            <Button fx:id="playPauseButton" text="Pause"/>
+            <Button fx:id="playMenuReturnButton" text="Return to Menu"/>
+        </HBox>
+    </VBox>
+    <GridPane fx:id="playBoardGridPane" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="1" alignment="CENTER"
+              hgap="2" vgap="2">
+
+        <ScrollPane fx:id="submittedWordsScroll" prefViewportWidth="50" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                    GridPane.rowSpan="4">
+
+            <VBox fx:id="subWordsVbox">
+                <padding>
+                    <Insets bottom="2"/>
+                </padding>
+            </VBox>
+        </ScrollPane>
+
+
+        <Label fx:id="d1"  GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+
+        </Label>
+        <Label fx:id="d2" GridPane.columnIndex="2" GridPane.rowIndex="1" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d3"  GridPane.columnIndex="3" GridPane.rowIndex="1" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d4"  GridPane.columnIndex="4" GridPane.rowIndex="1" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d5"  GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d6"  GridPane.columnIndex="2" GridPane.rowIndex="2" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d7" GridPane.columnIndex="3" GridPane.rowIndex="2" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d8"  GridPane.columnIndex="4" GridPane.rowIndex="2" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d9"  GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d10"  GridPane.columnIndex="2" GridPane.rowIndex="3" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d11"  GridPane.columnIndex="3" GridPane.rowIndex="3" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d12"  GridPane.columnIndex="4" GridPane.rowIndex="3" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d13"  GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d14"  GridPane.columnIndex="2" GridPane.rowIndex="4" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d15"  GridPane.columnIndex="3" GridPane.rowIndex="4" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+        <Label fx:id="d16"  GridPane.columnIndex="4" GridPane.rowIndex="4" prefWidth="100" prefHeight="100"
+               style="-fx-border-width: 1; -fx-border-style: solid; -fx-border-color: black" >
+            <padding><Insets left="45"/></padding>
+        </Label>
+    </GridPane>
+    <HBox GridPane.columnIndex="2" GridPane.rowIndex="2" alignment="CENTER">
+        <TextField fx:id="wordSubmitLine" />
+        <Button fx:id="playSubmitButton" text = "Submit"/>
+        <Button fx:id="clearSubmitLine" text="Clear"/>
+    </HBox>
+</GridPane>

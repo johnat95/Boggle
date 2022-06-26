@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.MainMenuController"
+            prefHeight="400.0" prefWidth="600.0"
+          alignment="CENTER">
+
+    <VBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Label text="Boggle!" GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER"/>
+        <Button fx:id="playButton" text = "Play" GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER"
+            />
+        <Button fx:id="highScoresButton" text = "High Scores" GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="CENTER"/>
+
+        <Button fx:id="exitButton" text ="Exit" GridPane.columnIndex="0" GridPane.rowIndex="3" alignment="CENTER" onAction="#exit"/>
+    </VBox>
+
+</GridPane>

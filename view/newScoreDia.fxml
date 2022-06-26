@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.NewScoreDiaController"
+            alignment="CENTER">
+    <TextField fx:id="scoreName" alignment="CENTER"/>
+
+
+
+</HBox>
