@@ -67,9 +67,6 @@ public class BoggleGameBoard {
     private ArrayList<String> scoreList = new ArrayList<>();
 
 
-
-
-
     public String[] genLetters(){
         String[] diceInPlay = new String[16];
         for(int i = 0; i<16; i++){
@@ -82,11 +79,9 @@ public class BoggleGameBoard {
     }
 
     public ArrayList<String> getDiceInPlay(){
-        ArrayList<String> temp = new ArrayList<>();
-        for(int i =0;i<16;i++){
-            temp.add(diceInPlay[i]);
-        }
-        return temp;
+
+       return new ArrayList<>(Arrays.asList(diceInPlay));
+
     }
     public Dice getDiceFromDiceArray(int diceNum){
         return diceArray[diceNum-1];
@@ -113,23 +108,27 @@ public class BoggleGameBoard {
     public int scoreGame() {
         int score = 0;
 
-        for(String s:scoreList){
+        for(String s : scoreList){
 
-            if(s.length()<3){
+            if(s.length()>2) {
 
-                continue;
-            }else if(s.length()>=8){
-
-                score = score+11;
-                continue;
-            }else if(s.length()<=4){
-
-                score++;
-                continue;
-            }else if(s.length()>=5 && s.length()<=7){
-
-                score = score+(s.length()-3);
-                continue;
+               switch(s.length()){
+                   case 3:
+                   case 4:
+                       score = 1;
+                       break;
+                   case 5:
+                       score = 2;
+                       break;
+                   case 6:
+                       score = 3;
+                       break;
+                   case 7:
+                       score = 4;
+                       break;
+                   default:
+                       score = 11;
+               }
             }
         }
 
