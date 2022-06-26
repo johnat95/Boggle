@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 
@@ -21,23 +23,23 @@ public class MainMenuController {
 
     //FXML
     @FXML
-    private Button playButton;
+    private Label playButton;
     @FXML
-    private Button highScoresButton;
+    private Label highScoresButton;
     @FXML
-    private Button exitButton;
+    private Label exitButton;
 
     //events
-    EventHandler<ActionEvent> playMakeWord = event -> loadPlayScreen();
+    EventHandler<MouseEvent> playMakeWord = event -> loadPlayScreen();
 
-    EventHandler<ActionEvent> highScoreEvent = event -> loadHighScoreScreen();
+    EventHandler<MouseEvent> highScoreEvent = event -> loadHighScoreScreen();
 
-    EventHandler<ActionEvent> exit = event -> exit();
+    EventHandler< MouseEvent> exit = event -> exit();
 
     public void initialize(){
-        playButton.setOnAction(playMakeWord);
-        highScoresButton.setOnAction(highScoreEvent);
-        exitButton.setOnAction(exit);
+        playButton.setOnMouseClicked(playMakeWord);
+        highScoresButton.setOnMouseClicked(highScoreEvent);
+        exitButton.setOnMouseClicked(exit);
     }
 
 

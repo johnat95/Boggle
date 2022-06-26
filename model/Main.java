@@ -50,9 +50,8 @@ public class Main extends Application {
         mmc = menuPaneLoader.getController();
 
         //root scene dimensions
-        int height = (int) Screen.getPrimary().getBounds().getHeight();
-        int width = (int) Screen.getPrimary().getBounds().getWidth();
-
+        int height = (int) Screen.getPrimary().getVisualBounds().getHeight();
+        int width = (int) Screen.getPrimary().getVisualBounds().getWidth();
         //create root
         Scene rootScene = new Scene(menuPane,width, height);
 

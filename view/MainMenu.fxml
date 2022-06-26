@@ -3,21 +3,139 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.stage.Screen?>
+
 
 <GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.MainMenuController"
-            prefHeight="400.0" prefWidth="600.0"
-          alignment="CENTER">
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controllers.MainMenuController"
+          alignment="CENTER"
+          >
 
-    <VBox styleClass=".menuVbox" alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
-        <Label text="Boggle!" GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER"/>
-        <Button fx:id="playButton" text = "Play" GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER"
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
 
-            />
-        <Button fx:id="highScoresButton" text = "High Scores" GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="CENTER"/>
+    <rowConstraints>
+        <RowConstraints percentHeight="50"/>
+    </rowConstraints>
 
-        <Button fx:id="exitButton" text ="Exit" GridPane.columnIndex="0" GridPane.rowIndex="3" alignment="CENTER" onAction="#exit"/>
-    </VBox>
+    <children>
+
+        <fx:define>
+            <Screen fx:factory="getPrimary" fx:id ="screen"/>
+        </fx:define>
+
+        <GridPane styleClass="mainMenuGrid" alignment="CENTER"
+                  GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100"/>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+            </rowConstraints>
+
+            <children>
+
+                <!-- Title display -->
+                <StackPane styleClass="menuTitlePane" GridPane.halignment="CENTER" GridPane.vgrow="ALWAYS"
+                      GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+                   <GridPane alignment="CENTER" >
+
+                       <columnConstraints>
+                           <ColumnConstraints percentWidth="100"/>
+                       </columnConstraints>
+
+                       <rowConstraints>
+                           <RowConstraints percentHeight="100"/>
+                       </rowConstraints>
+
+                       <children>
+                       <Label styleClass="menuTitlePaneLabel" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                              GridPane.halignment="CENTER" text="Boggle: The Game"/>
+                       </children>
+                   </GridPane>
+                </StackPane>
+
+                <!-- Play Button -->
+                <StackPane styleClass="menuTitlePane" GridPane.halignment="CENTER" GridPane.vgrow="ALWAYS"
+                           GridPane.columnIndex="0" GridPane.rowIndex="1">
+
+                    <GridPane alignment="CENTER" >
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="100"/>
+                        </columnConstraints>
+
+                        <rowConstraints>
+                            <RowConstraints percentHeight="100"/>
+                        </rowConstraints>
+
+                        <children>
+                            <Label styleClass="menuTitlePaneLabel" fx:id="playButton" text = "Play"
+                                   GridPane.halignment="CENTER" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="0"/>
+                        </children>
+                    </GridPane>
+                </StackPane>
+
+                <!--high scores Button-->
+                <StackPane styleClass="menuTitlePane" GridPane.halignment="CENTER" GridPane.vgrow="ALWAYS"
+                           GridPane.columnIndex="0" GridPane.rowIndex="2">
+
+                    <GridPane alignment="CENTER">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="100"/>
+                        </columnConstraints>
+
+                        <rowConstraints>
+                            <RowConstraints percentHeight="100"/>
+                        </rowConstraints>
+
+                        <children>
+                            <Label styleClass="menuTitlePaneLabel" fx:id="highScoresButton"
+                                   text = "High Scores" GridPane.halignment="CENTER"
+                                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        </children>
+                    </GridPane>
+                </StackPane>
+
+                <!--quit Button-->
+                <StackPane styleClass="menuTitlePane" GridPane.halignment="CENTER" GridPane.vgrow="ALWAYS"
+                           GridPane.columnIndex="0" GridPane.rowIndex="3">
+
+                    <GridPane alignment="CENTER">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="100"/>
+                        </columnConstraints>
+
+                        <rowConstraints>
+                            <RowConstraints percentHeight="100"/>
+                        </rowConstraints>
+
+                        <children>
+                            <Label styleClass="menuTitlePaneLabel" fx:id="exitButton" text ="Exit"
+                                   GridPane.halignment="CENTER" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="0"/>
+                        </children>
+
+                    </GridPane>
+
+                </StackPane>
+
+            </children>
+
+        </GridPane>
+
+    </children>
+
 
 </GridPane>

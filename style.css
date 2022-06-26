@@ -1,8 +1,30 @@
-
+/* global classes*/
 .button {
    -fx-background-color: #3caef0;
    -fx-text-fill: white;
-   -fx-pref-width: 200px;
+   -fx-padding: 5px;
 }
+
+/* mainMenu.fxml classes */
+
+.mainMenuGrid{
+    -fx-vgap:3px;
+
+}
+.menuTitlePane{
+   -fx-background-color: #3caef0;
+   -fx-background-radius: 10px;
+
+}
+
+.menuTitlePaneLabel{
+    -fx-text-fill: white;
+    -fx-font-size: 26;
+
+}
+
+
+
+
 
 
