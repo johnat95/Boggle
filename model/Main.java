@@ -41,16 +41,24 @@ public class Main extends Application {
 
 
 
-        //root scene
-        int height = (int) Screen.getPrimary().getBounds().getHeight();
-        int width = (int) Screen.getPrimary().getBounds().getWidth();
+
 
 
         //menu screen creation
         FXMLLoader menuPaneLoader = new FXMLLoader(getClass().getResource("../view/MainMenu.fxml"));
         Parent menuPane = menuPaneLoader.load();
         mmc = menuPaneLoader.getController();
+
+        //root scene dimensions
+        int height = (int) Screen.getPrimary().getBounds().getHeight();
+        int width = (int) Screen.getPrimary().getBounds().getWidth();
+
+        //create root
         Scene rootScene = new Scene(menuPane,width, height);
+
+        //add css to root scene
+        rootScene.getStylesheets().add("style.css");
+
 
         //play screen creation
         FXMLLoader boggleLoader = new FXMLLoader(getClass().getResource("../view/bogglePlay.fxml"));
